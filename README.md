@@ -2,6 +2,14 @@ exfs
 ====
 convenience extension of fs
 
+## Install
+
+```bash
+npm install exfs
+```
+
+
+## usage
 ### exfs.mkdir(path, [mode], callback, **createFlag**)
 Asynchronously make directory if directory isn't exist
 
