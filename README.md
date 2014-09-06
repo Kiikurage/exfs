@@ -11,8 +11,8 @@ npm install exfs
 
 ## usage
 
-### original fs funcrions
-This package has original functions in fs. So, you can use this package as below.
+### original funcrions in `fs`
+This package has original functions in `fs`. So, you can use this package as below.
 
 ```Javascript
 var fs = require("exfs");
