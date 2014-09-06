@@ -1,0 +1,28 @@
+{
+    "name": "exfs",
+    "version": "0.1.0",
+    "description": "convenience extension of fs",
+    "main": "exfs.js",
+    "directories": {
+        "test": "tests"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kikura-yuichiro/exfs.git"
+    },
+    "keywords": [
+        "logging",
+        "logger",
+        "log",
+        "logs",
+        "append"
+    ],
+    "author": "Kikura Yuichiro <y.kikura@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kikura-yuichiro/exfs/issues"
+    },
+    "homepage": "https://github.com/kikura-yuichiro/exfs"
+}
