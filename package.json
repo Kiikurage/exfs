@@ -1,6 +1,6 @@
 {
     "name": "exfs",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "convenience extension of fs",
     "main": "exfs.js",
     "directories": {
@@ -13,11 +13,11 @@
         "url": "https://github.com/kikura-yuichiro/exfs.git"
     },
     "keywords": [
-        "logging",
-        "logger",
-        "log",
-        "logs",
-        "append"
+        "fs",
+        "writeFile",
+        "mkdir",
+        "directory",
+        "recursive"
     ],
     "author": "Kikura Yuichiro <y.kikura@gmail.com>",
     "license": "MIT",
