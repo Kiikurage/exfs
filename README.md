@@ -21,7 +21,7 @@ var fs = require("exfs");
 
 ```
 
-### exfs.mkdir(path, [mode], callback, **createFlag**)
+### exfs.mkdir(path, [mode], callback, *createFlag*)
 Asynchronously make directory if directory isn't exist
 
 When the directory in which new folder will be made is not exist, if `createFlag=true`, this function make it. if `createFlag=false`, this function throw an error.
@@ -31,7 +31,7 @@ var fs = require("exfs");
 fs.mkdir("./you/can/make/this/very/very/deep/directory/at/a/time", callback, true);
 ```
 
-### exfs.writeFile(filename, data, [options], callback, **createFlag**)
+### exfs.writeFile(filename, data, [options], callback, *createFlag*)
 Asynchronously writes data to a file
 
 When the directory in which file is made is not exist, if `createFlag=true`, this function make it. if `createFlag=false`, this function throw an error.
