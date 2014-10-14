@@ -9,8 +9,6 @@ Object.keys(fs).forEach(function(name) {
     exports[name] = fs[name];
 });
 
-
-
 function mkdir(targetPath, mode, callback, flagCreate) {
     if (typeof mode === "function") {
         //argument "mode" may be disappointed
@@ -103,3 +101,27 @@ function writeFileSync(filename, data, options, flagCreate) {
     fs.writeFileSync(filename, data, options);
 }
 exports.writeFileSync = writeFileSync;
+
+function writeFileP(filename, data, options, callback, flagCreate) {
+    return new Promise(function(resolve, reject) {
+        exports.writeFile(filename, data, options, function(err) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve();
+            }
+        }, flagCreate);
+    });
+}
+
+function readFileP(filename, options, callback) {
+    return new Promise(function(resolve, reject) {
+        fs.readFile(filename, options, function(err, body) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(body);
+            }
+        });
+    })
+}
