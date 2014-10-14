@@ -113,6 +113,7 @@ function writeFileP(filename, data, options, callback, flagCreate) {
         }, flagCreate);
     });
 }
+exports.writeFileP = writeFileP;
 
 function readFileP(filename, options, callback) {
     return new Promise(function(resolve, reject) {
@@ -125,3 +126,4 @@ function readFileP(filename, options, callback) {
         });
     })
 }
+exports.readFileP = readFileP;
