@@ -102,7 +102,7 @@ function writeFileSync(filename, data, options, flagCreate) {
 }
 exports.writeFileSync = writeFileSync;
 
-function writeFileP(filename, data, options, callback, flagCreate) {
+function writeFileP(filename, data, options, flagCreate) {
     return new Promise(function(resolve, reject) {
         exports.writeFile(filename, data, options, function(err) {
             if (err) {
@@ -115,7 +115,20 @@ function writeFileP(filename, data, options, callback, flagCreate) {
 }
 exports.writeFileP = writeFileP;
 
-function readFileP(filename, options, callback) {
+function appendFileP(filename, data, options) {
+    return new Promise(function(resolve, reject) {
+        exports.appendFile(filename, data, options, function(err) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve();
+            }
+        });
+    });
+}
+exports.appendFileP = appendFileP;
+
+function readFileP(filename, options) {
     return new Promise(function(resolve, reject) {
         fs.readFile(filename, options, function(err, body) {
             if (err) {
@@ -127,3 +140,12 @@ function readFileP(filename, options, callback) {
     })
 }
 exports.readFileP = readFileP;
+
+function unlinkP(path) {
+    return new Promise(function(resolve, reject) {
+        fs.unlink(path, function(err, body) {
+            resolve(body);
+        });
+    })
+}
+exports.unlinkP = unlinkP;
